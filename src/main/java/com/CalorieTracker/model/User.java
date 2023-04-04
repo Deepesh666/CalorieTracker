@@ -1,5 +1,7 @@
 package com.CalorieTracker.model;
 
+import java.util.List;
+
 import javax.validation.constraints.NotBlank;
 
 import jakarta.persistence.Column;
@@ -7,6 +9,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.Data;
 
@@ -42,5 +45,11 @@ public class User {
 	
 	@Column(name = "bmr")
 	private Double bmr;
+	
+//	@OneToMany(mappedBy = "user")
+//	private List<MetUserByDate> metUserByDate;
+//	
+//	@OneToMany(mappedBy = "user")
+//	private List<FoodUserByDate> foodUserByDate;
 	
 }

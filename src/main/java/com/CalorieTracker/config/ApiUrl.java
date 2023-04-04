@@ -22,10 +22,14 @@ public class ApiUrl {
 	
 	public static String allFoodFileData = BASE_URL + VERSION + "/viewAllFoodFileData";
 	
+	public static String findDataBySelectedFood = BASE_URL + VERSION + "/findDataBySelectedFood/{foodName}";
+	
 	//MET FILE API
 	
 	public static String readOrUpdateMET = BASE_URL + VERSION + "/readOrUpdateMETFile";
 	
 	public static String allMetFileData = BASE_URL + VERSION + "/viewAllMetFileData";
+	
+	public static String findDataBySpecificMotion = BASE_URL + VERSION + "/findDataBySpecificMotion/{specificMotion}";
 	
 }

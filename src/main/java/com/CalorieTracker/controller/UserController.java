@@ -1,9 +1,7 @@
 package com.CalorieTracker.controller;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Set;
 
 import org.apache.commons.lang3.StringUtils;
 import org.modelmapper.ModelMapper;
@@ -15,10 +13,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import com.CalorieTracker.dto.FoodFileDTO;
+import com.CalorieTracker.dto.MetFileDTO;
 import com.CalorieTracker.dto.UserDTO;
-import com.CalorieTracker.model.FoodFile;
 import com.CalorieTracker.model.FoodGroup;
-import com.CalorieTracker.model.METFile;
 import com.CalorieTracker.model.User;
 import com.CalorieTracker.service.RestService;
 import com.CalorieTracker.service.UserService;
@@ -59,8 +57,8 @@ public class UserController {
 		System.err.println("::: UserController.allUserData ::: ");
 		ModelAndView modelAndView = new ModelAndView();
 		List<User> userList = null;
-		List<FoodFile> foodFileList = null;
-		List<METFile> metFileList = null;
+		List<FoodFileDTO> foodFileList = null;
+		List<MetFileDTO> metFileList = null;
 		List<FoodGroup> foodGroupList = null;
 		
 		Gson gson = new Gson(); 
@@ -76,16 +74,15 @@ public class UserController {
 		metFile = restService.dataFormatter(metFile);
 		
 		User[] userArray = gson.fromJson(user, User[].class);
-		FoodFile[] foodFileArray = gson.fromJson(foodFile, FoodFile[].class);
+		FoodFileDTO[] foodFileArray = gson.fromJson(foodFile, FoodFileDTO[].class);
 		FoodGroup[] foodGroupArray = gson.fromJson(foodGroup, FoodGroup[].class);
-		METFile[] metFileArray = gson.fromJson(metFile, METFile[].class);
+		MetFileDTO[] metFileArray = gson.fromJson(metFile, MetFileDTO[].class);
 
 		
 		userList = Arrays.asList(userArray);
 		foodFileList = Arrays.asList(foodFileArray);
 		foodGroupList = Arrays.asList(foodGroupArray);
 		metFileList = Arrays.asList(metFileArray);
-		
 		
 		modelAndView.addObject("userList", userList);
 		modelAndView.addObject("foodFileList", foodFileList);
@@ -97,8 +94,6 @@ public class UserController {
 			System.out.println(restService.addingFoodGroupData());
 			restService.addingFoodGroupData();
 		}
-		
-		
 		modelAndView.setViewName("user-list");
 		return modelAndView;
 	}

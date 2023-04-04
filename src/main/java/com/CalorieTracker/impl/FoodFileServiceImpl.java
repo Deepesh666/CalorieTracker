@@ -142,5 +142,12 @@ public class FoodFileServiceImpl implements FoodFileService {
 		List<FoodFile> foodFile = foodFileRepository.findAll();
 		return foodFile;
 	}
+
+	@Override
+	public FoodFile getDataByFoodName(String foodName) {
+		System.err.println("::: FoodFileServiceImpl.getDataByFoodName ::: ");
+		FoodFile foodFile = foodFileRepository.findByFoodName(foodName);
+		return foodFile;
+	}
 	
 }

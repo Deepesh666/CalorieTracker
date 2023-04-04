@@ -18,4 +18,6 @@ public interface FoodFileService {
 	boolean verifyHasExcelFormat(MultipartFile multipartFile);
 	
 	List<FoodFile> allFoodFileData();
+	
+	FoodFile getDataByFoodName(String foodName);
 }

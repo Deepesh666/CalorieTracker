@@ -126,4 +126,11 @@ public static String TYPE = "application/vnd.openxmlformats-officedocument.sprea
 	}
 
 	
+	@Override
+	public METFile findBySpecificMotion(String specificMotion) {
+		System.err.println("::: METFileServiceImpl.findBySpecificMotion ::: ");
+		METFile metFile = metFileRepository.findBySpecficMotion(specificMotion);
+		return metFile;
+	}
+
 }

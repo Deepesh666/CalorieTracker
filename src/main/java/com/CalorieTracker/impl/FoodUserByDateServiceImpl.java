@@ -40,9 +40,7 @@ public class FoodUserByDateServiceImpl implements FoodUserByDateService{
 		System.out.println("userId :::: " + userId);
 		if(userId != null) {
 			
-			foodUserByDate.setCreatedAt(LocalDateTime.now());
 			foodUserByDate.setConsumingDate(LocalDate.now());
-			foodUserByDate.setFoodFileId(foodId);
 			
 			foodUserByDateRepository.save(foodUserByDate);
 			

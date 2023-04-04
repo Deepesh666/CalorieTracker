@@ -16,4 +16,6 @@ public interface METFileService {
 	boolean verifyHasExcelFormat(MultipartFile multipartFile);
 	
 	List<METFile> allMetFileData();
+	
+	METFile findBySpecificMotion(String specificMotion);
 }

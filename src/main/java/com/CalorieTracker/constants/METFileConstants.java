@@ -4,6 +4,8 @@ public enum METFileConstants {
 
 	ALL_MET_FILE_DATA_FETCHED_SUCCESSFULLY("ALL_MET_FILE_DATA_FETCHED_SUCCESSFULLY", "all met file data fetched successfully"),
 	
+	SELECTED_MET_FILE_DATA_FETCHED_SUCCESSFULLY("SELECTED_MET_FILE_DATA_FETCHED_SUCCESSFULLY", "selected met file data fetched successfully"),
+	
 	FILE_FORMAT_IS_INCORRECT("FILE_FORMAT_IS_INCORRECT" , "file format is incorrect or empty"),
 	
 	NEW_UNMATCHED_FOOD_DATA_ADDED_FROM_FILE("NEW_UNMATCHED_FOOD_DATA_ADDED_FROM_FILE", "new unmatched data added from file remains are same"),

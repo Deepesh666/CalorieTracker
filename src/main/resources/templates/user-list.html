@@ -99,8 +99,8 @@
                             <div class="input-field">
                                 <label>Select Food Name</label>
                                 <select class="selectbox" th:field="*{foodFileList}">
-                                    <option th:each="ff : ${foodFileList}"
-                                    th:text="${ff.foodName}" th:value="${ff.id}"></option>
+                                    <option th:each="fg : ${foodFileList}"
+                                    th:text="${fg.foodName}" th:value="${fg.id}"></option>
                                 </select>
                             </div>
                             <div class="input-field">
@@ -113,11 +113,25 @@
 
                             <div class="input-field">
                                 <label>Select Food Group</label>
-                               <select class="selectbox" th:field="*{foodFileList}">
-                                    <option th:each="ff : ${foodFileList}"
-                                    th:text="${ff.foodGroup}" th:value="${ff.id}"></option>
+                                <select class="selectbox">
                                 </select>
                             </div>
+                            
+                        <!--    document.getElementById("my-select").addEventListener("change", function() {
+							  var selectedValue = this.value;
+							  var xhr = new XMLHttpRequest();
+							  xhr.onreadystatechange = function() {
+							    if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+							      var response = JSON.parse(xhr.responseText);
+							      document.getElementById("result").textContent = response.result;
+							    }
+							  }
+							  xhr.open("GET", "http://localhost:9001/calorietracker/api/findDataBySelectedFood?selectedValue=" + selectedValue);
+							  xhr.send();
+							});
+                            
+                            -->
+                            
                             <div class="input-field">
                                 <label>Serving</label>
                                 <input type="text" placeholder="Serving" />
@@ -135,16 +149,13 @@
                             <div class="input-field">
                                 <label>Activity Name</label>
                                 <select class="selectbox" th:field="*{metFileList}">
-                                    <option th:each="mf : ${metFileList}"
-                                    th:text="${mf.activity}" th:value="${mf.id}"></option>
+                                    <option th:each="fg : ${metFileList}"
+                                    th:text="${fg.specificMotion}" th:value="${fg.id}"></option>
                                 </select>
                             </div>
                             <div class="input-field">
                                 <label>Activity Description</label>
-                                <select class="selectbox" th:field="*{metFileList}">
-                                    <option th:each="mf : ${metFileList}"
-                                    th:text="${mf.specificMotion}" th:value="${mf.id}"></option>
-                                </select>
+                                <textarea placeholder="Description"></textarea>
                             </div>
                             <div class="input-field">
                                 <label>MET Value</label>

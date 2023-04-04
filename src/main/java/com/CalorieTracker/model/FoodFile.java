@@ -1,10 +1,13 @@
 package com.CalorieTracker.model;
 
+import java.util.List;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.Data;
 
@@ -41,5 +44,8 @@ public class FoodFile {
 	
 	@Column(name = "servingDescription(1g)")
 	private String servingDescription;
+	
+//	@OneToMany(mappedBy = "foodFile")
+//	private List<FoodUserByDate> foodUserByDate;
 	
 }
