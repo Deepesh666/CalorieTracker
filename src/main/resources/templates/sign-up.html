@@ -1,0 +1,76 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"  lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="icon" th:href="@{/img/favicon.ico}" type="image/x-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <title>Calorie Tracker Coding Assignment - Sign up</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+        <link th:href="@{/css/global.css}" rel="stylesheet">
+    </head>
+    <body>
+        <div>
+            <header class="header">
+                <div class="container">
+                    <div class="logo">
+                        <a href="#">
+                            <img th:src="@{/img/logo.png}">
+                        </a>
+                    </div>
+                </div>
+            </header>
+            <div class="mid-container">
+                <div class="signup-container">
+                    <div class="white-card">
+                        <h1>Sign Up</h1>
+                        <form th:action="@{/saveUserInput}" method="post">
+                        <div class="card-body">
+                            <div class="input-field">
+                                <label>Name</label>
+                                <input type="text" placeholder="Name" required name="name"/>
+                            </div>
+                            <div class="input-field">
+                                <label>Weight</label>
+                                <input type="text" placeholder="Weight" required name="weight"/>
+                            </div>
+                            <div class="input-field">
+                                <label>Height</label>
+                                <input type="text" placeholder="Height" required name="height"/>
+                            </div>
+                            <div class="input-field">
+                                <label>Gender</label>
+                                <select class="selectbox" name = "gender">
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                </select>
+                            </div>
+                            <div class="input-field">
+                                <label>Age</label>
+                                <input type="date" placeholder="Age" required name="age"/>
+                            </div>
+                            <div class="input-field btn-set--right">
+                               <!--  <button onclick="window.location.href='user-list.html'" class="btn-primary">Sign Up</button> -->
+                            
+                            <button type=submit class="btn-primary" >Sign Up</button>
+                            </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="footer">
+                <div class="container">
+                  <p>2022 LMD Consulting, LLC , All Rights Reserved</p>
+                </div>
+            </footer>
+        </div>
+    </body>
+    <script th:src="@{static/js/jquery.slim.min.js}"></script>
+<script th:src="@{/js/popper.min.js}"></script>
+<script th:src="@{/js/bootstrap.min.js}"></script>
+<script th:src="@{/js/custom.js}"></script>
+</html>

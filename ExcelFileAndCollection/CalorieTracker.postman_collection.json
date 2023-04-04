@@ -1,0 +1,150 @@
+{
+	"info": {
+		"_postman_id": "fa141455-c3ff-491f-890d-be39291a5ec0",
+		"name": "CalorieTracker",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "addUserDetails",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"a1\",\r\n    \"weight\":\"2\",\r\n    \"height\":\"1\",\r\n    \"gender\":\"aaaa\",\r\n    \"age\":\"a\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9001/calorietracker/api/addUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"calorietracker",
+								"api",
+								"addUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "viewAllUsers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9001/calorietracker/api/viewAllUsers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"calorietracker",
+								"api",
+								"viewAllUsers"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "FoodFile",
+			"item": [
+				{
+					"name": "readOrUpdateFoodFile",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/D:/calorie-tracker-assignment/data-excels-for-db/food-calories.xlsx"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:9001/calorietracker/api/readOrUpdateFoodFile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"calorietracker",
+								"api",
+								"readOrUpdateFoodFile"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "METFile",
+			"item": [
+				{
+					"name": "readOrUpdateMETFile",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/D:/calorie-tracker-assignment/data-excels-for-db/MET-values.xlsx"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:9001/calorietracker/api/readOrUpdateMETFile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"calorietracker",
+								"api",
+								"readOrUpdateMETFile"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "FoodUserByDate",
+			"item": [
+				{
+					"name": "addFood/1",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
